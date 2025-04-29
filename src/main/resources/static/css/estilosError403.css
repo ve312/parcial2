@@ -1,0 +1,32 @@
+/* Fondo y estructura básica */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    color: #2c3e50;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor del mensaje de error */
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e74c3c;
+    background-color: #f9c2c2;
+    padding: 1.5em 2em;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Estilo del footer */
+footer {
+    margin-top: 2em;
+    font-size: 1em;
+    color: #34495e;
+}

@@ -1,0 +1,71 @@
+/* Fondo general y centrado */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #d6eaf8, #aed6f1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: white;
+    padding: 2em 3em;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #154360;
+    margin-bottom: 1.5em;
+}
+
+/* Etiquetas e inputs */
+label {
+    display: block;
+    text-align: left;
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.6em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Botón de login */
+input[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    padding: 0.6em 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #1a5276;
+}

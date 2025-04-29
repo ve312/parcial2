@@ -1,0 +1,69 @@
+/* Estilo base para la página Crear Asignatura */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    padding: 2em;
+    line-height: 1.5;
+}
+
+/* Título */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+/* Estilo general del formulario */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #eaf6ff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #2e5c8a;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="time"] {
+    width: 100%;
+    padding: 0.6em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    background-color: #2e86de;
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #2163a6;
+}
+
+/* Footer adaptado */
+footer {
+    margin-top: 3em;
+    padding: 1em;
+    background-color: #f0f0f0;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}

@@ -1,0 +1,67 @@
+/* Fondo y tipografía general */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f2faff;
+    color: #2c3e50;
+    padding: 2em;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #1a5276;
+    margin-bottom: 1em;
+}
+
+/* Tabla */
+table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #2980b9;
+    color: white;
+}
+
+th, td {
+    padding: 0.8em 1em;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4faff;
+}
+
+/* Enlaces */
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #154360;
+}
+
+/* Mensaje sin asignaturas */
+div p {
+    color: #a93226;
+    font-style: italic;
+    font-size: 1.1em;
+    margin-top: 2em;
+}
+
+/* Footer */
+footer {
+    margin-top: 3em;
+    padding: 1em;
+    background-color: #eaeaea;
+    font-size: 0.9em;
+    color: #555;
+}
