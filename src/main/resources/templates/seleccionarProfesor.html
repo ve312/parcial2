@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>seleccionProfe</title>
+</head>
+<body>
+    <form th:action="@{/guardar/profesor}" method="post">
+        <input type="hidden" th:value="${id}" name="id"/>
+
+        <label for="profesorId">Selecciona el profesor disponible:</label>
+        <select multiple name="profesorId">
+            <option th:each="profesor : ${profesores}" th:value="${profesor.id}" th:text="${profesor.nombre}"></option>
+        </select>
+        <input type="submit" name="enviar" value="enviar">
+    </form>
+
+    <footer th:replace="layout/plantillas :: footer"/>
+</body>
+</html>

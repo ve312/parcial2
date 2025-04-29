@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>inicio</title>
+</head>
+<body>
+    <h1>Informacion de materias</h1>
+    <h4>opciones:</h4>
+    <ul>
+        <li><a th:href="@{/ver}">Ver materias</a></li>
+        <li><a th:href="@{/crear}">crear materias</a></li>
+    </ul>
+
+    <footer th:replace="layout/plantillas :: footer"/>
+</body>
+</html>

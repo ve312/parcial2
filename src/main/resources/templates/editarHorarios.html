@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>editarHorarios</title>
+</head>
+<body>
+<form th:action="@{/subir}" method="POST" th:object="${asignatura}">
+    <input type="hidden" th:field="*{id}"/>
+
+    <label for="horaInicio">Hora de inicio: </label>
+    <input type="time" id="horaInicio" th:field="*{horaInicio}" />
+    <span th:if="${#fields.hasErrors('horaInicio')}" th:errors="*{horaInicio}">error horaInicio</span>
+
+    <label for="horaFin">Hora de finalización: </label>
+    <input type="time" id="horaFin" th:field="*{horaFin}" />
+    <span th:if="${#fields.hasErrors('horaFin')}" th:errors="*{horaFin}">error horaFin</span>
+
+    <input type="submit" name="botonEnviar" value="Enviar datos" />
+</form>
+
+<footer th:replace="layout/plantillas :: footer"/>
+
+<script th:src="@{/js/editarHorarios.js}" type="text/javascript"></script>
+</body>
+</html>

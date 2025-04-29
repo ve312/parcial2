@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>crear</title>
+</head>
+<body>
+<h2>Crear Asignatura:</h2>
+<form th:action="@{/guardar}" method="post" th:object="${asignatura}">
+
+  <input type="hidden" th:field="*{id}"/>
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id = "nombre" maxlength="30" required th:field="*{nombre}" />
+  <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">error nombre</span>
+
+  <br/>
+
+  <label for="descripcion">Descripcion:</label>
+  <input type="text" id="descripcion" maxlength="100" required th:field="*{descripcion}" />
+  <span th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}">error descripcion</span>
+
+  <br/>
+
+  <label for="salon">Salon:</label>
+  <input type="text" id="salon" th:field="*{salon}" />
+  <span th:if="${#fields.hasErrors('salon')}" th:errors="*{salon}">error salon</span>
+
+  <br/>
+
+  <label for="horaInicio">Hora de inicio: </label>
+  <input type="time" id="horaInicio" th:field="*{horaInicio}" />
+  <span th:if="${#fields.hasErrors('horaInicio')}" th:errors="*{horaInicio}">error horaInicio</span>
+
+  <br/>
+
+  <label for="horaFin">Hora de finalización: </label>
+  <input type="time" id="horaFin" th:field="*{horaFin}" />
+  <span th:if="${#fields.hasErrors('horaFin')}" th:errors="*{horaFin}">error horaFin</span>
+
+  <!-- <input type="hidden" th:field="*{profesor}" th:value="null"/>-->
+
+  <br/>
+  <input type="submit" name="botonEnviar" value="Enviar datos" />
+</form>
+
+<footer th:replace="layout/plantillas :: footer"/>
+
+<script th:src="@{/js/crear.js}" type="text/javascript"></script>
+</body>
+</html>
+

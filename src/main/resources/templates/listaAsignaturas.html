@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Asignaturas</title>
+</head>
+<body>
+  <h1>Asignaturas</h1>
+
+  <table th:if="${!asignaturas.isEmpty()}" border="3px">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Salon</th>
+      <th>Hora Inicio</th>
+      <th>Hora Fin</th>
+      <th>Profesor</th>
+      <th>editarTodo</th>
+      <th>editarHorarios</th>
+      <th>eliminar</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="asignatura : ${asignaturas}">
+      <td th:text="${asignatura.nombre}"></td>
+      <td th:text="${asignatura.descripcion}"></td>
+      <td th:text="${asignatura.salon}"></td>
+      <td th:text="${asignatura.horaInicio}"></td>
+      <td th:text="${asignatura.horaFin}"></td>
+      <td th:text="${asignatura.profesor.nombre}"></td>
+      <td><a th:href="@{/modificar/} + ${asignatura.id}">editarTodo</a></td>
+      <td><a th:href="@{/editar/horarios/} + ${asignatura.id}">editarHorarios</a></td>
+      <td><a th:href="@{/eliminar/} + ${asignatura.id}">eliminar</a></td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <div th:if="${asignaturas.isEmpty()}">
+    <p>No hay asignaturas para listar :(</p>
+  </div>
+
+  <footer th:replace="layout/plantillas :: footer"/>
+
+</body>
+</html>
